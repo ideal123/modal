@@ -1,0 +1,111 @@
+.tes-dialog,
+.tes-dialog * {
+  box-sizing: border-box;
+}
+
+.tes-hidden {
+  display: none;
+}
+
+.dialog-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .3);
+}
+
+.dialog-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+
+.dialog-popup-hd {
+  position: relative;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: bold;
+}
+
+.dialog-popup-hd .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.dialog-popup-hd .close-icon {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.dialog-popup-hd .close-icon:before,
+.dialog-popup-hd .close-icon:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  content: '';
+  margin-top: -1px;
+  border-top: 2px solid #ccc;
+}
+
+.dialog-popup-hd .close-btn:hover .close-icon:before,
+.dialog-popup-hd .close-btn:hover .close-icon:after {
+  border-color: #666;
+}
+
+.dialog-popup-hd .close-icon:before {
+  transform: rotate(45deg);
+}
+
+.dialog-popup-hd .close-icon:after {
+  transform: rotate(-45deg);
+}
+
+.dialog-popup-bd {
+  min-height: 140px;
+  padding: 20px 20px 0;
+}
+
+.dialog-popup-ft {
+  padding: 20px 30px;
+  text-align: right;
+}
+
+.dialog-popup-ft .popup-btn {
+  display: inline-block;
+  margin-left: 16px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  line-height: 1;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  font-size: 16px;
+  transition: color .3s linear, background-color .3s linear, border .3s linear;
+}
+
+.dialog-popup-ft .popup-btn:hover {
+  background: #ccc;
+}
+
+.dialog-popup-ft .popup-btn:active {
+  background: #999;
+  transition: none;
+}
